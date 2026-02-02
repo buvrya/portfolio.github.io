@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet Met Gala - Alexy BUVRY</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Plus+Jakarta+Sans:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css?v=4">
+    <!-- Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">A. BUVRY</div>
+        <nav>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="index.html#biographie">À Propos</a></li>
+                <li><a href="index.html#projets">Projets</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" style="min-height: 40vh;">
+            <div class="container">
+                <div class="hero-card">
+                    <span class="section-tag">Projet Universitaire</span>
+                    <h1>CRITIQUES MET GALA</h1>
+                    <div class="card-tags" style="justify-content: center; margin-top: 1rem;">
+                        <span class="tag">VUE.JS</span>
+                        <span class="tag">JAVASCRIPT</span>
+                        <span class="tag">IUT MONTPELLIER</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="analysis-block">
+                    <h3><i class="fas fa-flag-checkered"></i> CONTEXTE DU PROJET</h3>
+                    <p><strong>Commande Académique (BUT 3) :</strong> Développement Full Stack d'une plateforme de
+                        critiques en <strong>Quadrinôme</strong>.</p>
+                    <p style="margin-top: 1rem;"><strong>Sujet :</strong> "Met Gala Critiques". Une application
+                        permettant de noter et commenter les tenues de la célèbre cérémonie.</p>
+                    <p style="margin-top: 1rem;"><strong>Architecture Headless :</strong> Séparation stricte entre le
+                        Back-end (API REST) et le Front-end (SPA). Le projet nécessitait une authentification robuste
+                        (JWT) et une intégration avec le service externe "MyAvatar".</p>
+                    <ul style="margin-top: 1rem; list-style: none; padding-left: 0;">
+                        <li><i class="fas fa-layer-group"></i> <strong>Stack :</strong> Symfony 7, API Platform, Vue.js
+                            3, Pinia.</li>
+                        <li><i class="fas fa-users"></i> <strong>Rôle :</strong> Lead Back-end & DevOps (CI/CD).</li>
+                    </ul>
+                </div>
+
+                <div class="analysis-block">
+                    <h3><i class="fas fa-cogs"></i> RÉALISATION & FEATURES</h3>
+                    <p>Une double application interconnectée offrant une expérience utilisateur riche et sécurisée.</p>
+
+                    <div class="card-grid" style="grid-template-columns: 1fr; gap: 1.5rem; margin-top: 1.5rem;">
+                        <div style="border-left: 4px solid var(--primary-color); padding-left: 1.5rem;">
+                            <h4 style="margin-bottom: 0.5rem;">API Platform & Sécurité</h4>
+                            <p>Développement d'une API REST de niveau 3. Gestion fine des droits avec les
+                                <strong>Voters</strong> (ex: Seul l'auteur peut modifier sa critique) et sécurisation
+                                via JWT & Refresh Tokens.
+                            </p>
+                        </div>
+                        <div style="border-left: 4px solid var(--primary-color); padding-left: 1.5rem;">
+                            <h4 style="margin-bottom: 0.5rem;">Client Vue.js Réactif</h4>
+                            <p>Interface SPA fluide consommant l'API. Utilisation de Pinia pour le state management
+                                (Utilisateur connecté, Favoris) et gestion globale des erreurs api.</p>
+                        </div>
+                        <div style="border-left: 4px solid var(--primary-color); padding-left: 1.5rem;">
+                            <h4 style="margin-bottom: 0.5rem;">Écosystème Connecté</h4>
+                            <p>Interconnexion avec le projet <strong>MyAvatar</strong> : hashage des emails utilisateurs
+                                (SHA-256) pour récupérer dynamiquement leurs photos de profil depuis notre service
+                                tiers.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="analysis-block">
+                    <h3><i class="fas fa-images"></i> GALERIE "MET GALA"</h3>
+                    <div style="margin-bottom: 2rem;">
+                        <a href="https://webinfo.iutmontp.univ-montp2.fr/~buvrya/the-met-client/" target="_blank"
+                            class="btn btn-primary">
+                            <i class="fas fa-external-link-alt"></i> VOIR LE SITE EN LIVE
+                        </a>
+                    </div>
+                    <div class="card-grid"
+                        style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                        <!-- Screenshot 1 -->
+                        <div class="card" style="padding: 0; box-shadow: 4px 4px 0 black; border: 2px solid black;">
+                            <img src="assets/metgala_home.png" alt="Accueil Met Gala" class="zoomable"
+                                style="width: 100%; height: 150px; object-fit: cover; border-bottom: 2px solid black;">
+                            <p style="padding: 0.5rem; font-size: 0.8rem; text-align: center; font-weight: bold;">
+                                ACCUEIL IMMERSIF</p>
+                        </div>
+                        <!-- Screenshot 2 -->
+                        <div class="card" style="padding: 0; box-shadow: 4px 4px 0 black; border: 2px solid black;">
+                            <img src="assets/metgala_detail.png" alt="Détail Critique" class="zoomable"
+                                style="width: 100%; height: 150px; object-fit: cover; border-bottom: 2px solid black;">
+                            <p style="padding: 0.5rem; font-size: 0.8rem; text-align: center; font-weight: bold;">PAGE
+                                DE CRITIQUE</p>
+                        </div>
+                        <!-- Screenshot 3 -->
+                        <div class="card" style="padding: 0; box-shadow: 4px 4px 0 black; border: 2px solid black;">
+                            <img src="assets/metgala_profile.png" alt="Intégration MyAvatar" class="zoomable"
+                                style="width: 100%; height: 150px; object-fit: cover; border-bottom: 2px solid black;">
+                            <p style="padding: 0.5rem; font-size: 0.8rem; text-align: center; font-weight: bold;">
+                                CONNEXION MYAVATAR</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="analysis-block">
+                    <h3><i class="fas fa-microchip"></i> BILAN DES COMPÉTENCES (NIVEAU 3)</h3>
+
+                    <!-- Compétence RÉALISER -->
+                    <div style="margin-bottom: 3rem;">
+                        <h4
+                            style="background: #b91c1c; color: white; display: inline-block; padding: 0.2rem 1rem; transform: rotate(-1deg); margin-bottom: 1rem;">
+                            COMPÉTENCE 1 : RÉALISER
+                        </h4>
+                        <div style="padding-left: 1.5rem; border-left: 5px solid #b91c1c;">
+                            <p
+                                style="font-size: 1rem; margin-bottom: 0.5rem; text-transform: uppercase; font-weight: 800; color: #b91c1c;">
+                                SITUATION : Concevoir une architecture distribuée (Headless)
+                            </p>
+                            <p style="margin-bottom: 0.5rem;"><strong>AC31.01 - Choix techniques & Intégration
+                                    :</strong></p>
+                            <ul style="list-style: none; padding: 0;">
+                                <li style="margin-bottom: 0.5rem;"><strong>Problématique :</strong> Coupler un Front
+                                    riche (Vue) et un Back robuste (Symfony) en gardant une indépendance totale.</li>
+                                <li style="margin-bottom: 0.5rem;"><strong>Solution :</strong> Choix d'une architecture
+                                    API-First avec <strong>API Platform</strong>. Exposition standardisée des ressources
+                                    (JSON-LD/Hydra) permettant au front Vue.js de s'auto-configurer partiellement.
+                                    Utilisation de <code>StateProcessors</code> personnalisés pour la logique métier
+                                    complexe (ex: validation automatique des critiques admin).</li>
+                                <li><strong>Preuve :</strong> Documentation Swagger auto-générée et réutilisable par
+                                    l'équipe Front.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Compétence OPTIMISER (Spécialité) -->
+                    <div style="margin-bottom: 3rem;">
+                        <h4
+                            style="background: #ea580c; color: white; display: inline-block; padding: 0.2rem 1rem; transform: rotate(1deg); margin-bottom: 1rem;">
+                            COMPÉTENCE 2 : OPTIMISER (SPÉCIALITÉ)
+                        </h4>
+                        <div style="padding-left: 1.5rem; border-left: 5px solid #ea580c;">
+                            <p
+                                style="font-size: 1rem; margin-bottom: 0.5rem; text-transform: uppercase; font-weight: 800; color: #ea580c;">
+                                SITUATION : Maîtriser l'exposition des données
+                            </p>
+                            <p style="margin-bottom: 0.5rem;"><strong>AC32.02 - Qualité & Sécurité des données
+                                    :</strong></p>
+                            <ul style="list-style: none; padding: 0;">
+                                <li style="margin-bottom: 0.5rem;"><strong>Problématique :</strong> Empêcher
+                                    l'exposition de données sensibles (emails, hash mdp) via l'API publique.</li>
+                                <li style="margin-bottom: 0.5rem;"><strong>Solution :</strong> Configuration fine des
+                                    <strong>Normalization Groups</strong>. Définition de groupes contextuels
+                                    (<code>read:user:public</code> vs <code>read:user:owner</code>) pour filtrer les
+                                    champs sérialisés selon le rôle de l'appelant.
+                                </li>
+                                <li><strong>Impact :</strong> Sécurité "By Design" assurant qu'aucune donnée privée ne
+                                    fuite dans les réponses JSON.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Compétence COLLABORER -->
+                    <div>
+                        <h4
+                            style="background: black; color: white; display: inline-block; padding: 0.2rem 1rem; transform: rotate(-1deg); margin-bottom: 1rem;">
+                            COMPÉTENCE 6 : COLLABORER
+                        </h4>
+                        <div style="padding-left: 1.5rem; border-left: 5px solid black;">
+                            <p
+                                style="font-size: 1rem; margin-bottom: 0.5rem; text-transform: uppercase; font-weight: 800; color: black;">
+                                SITUATION : Coordonner une équipe Full Stack
+                            </p>
+                            <p style="margin-bottom: 0.5rem;"><strong>AC36.02 - Co-conception & Intégration :</strong>
+                            </p>
+                            <ul style="list-style: none; padding: 0;">
+                                <li style="margin-bottom: 0.5rem;"><strong>Challenge :</strong> Les développeurs Vue.js
+                                    étaient bloqués en attendant les routes API finales.</li>
+                                <li style="margin-bottom: 0.5rem;"><strong>Solution :</strong> Rédaction conjointe du
+                                    <strong>Contrat d'Interface</strong> (OpenAPI) dès le jour 1. Mocking des routes
+                                    critiques pour permettre au Front d'avancer sans attendre le Back.
+                                </li>
+                                <li><strong>Résultat :</strong> Développement parallèle efficace et réduction des
+                                    "frictions" lors de la connexion finale Front/Back.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="logo"
+                style="margin-bottom: 2rem; display: inline-block; background: white; color: black; border: 3px solid black;">
+                A. BUVRY</div>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/alexy-buvry" target="_blank" class="social-icon"><i
+                        class="fab fa-linkedin-in"></i></a>
+                <a href="mailto:alexy.buvry@etu.umontpellier.fr" class="social-icon"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p style="font-weight: 700;">© 2026 ALEXY BUVRY.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

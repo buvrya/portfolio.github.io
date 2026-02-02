@@ -1,0 +1,532 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Plus+Jakarta+Sans:wght@400;500;700&display=swap');
+
+:root {
+    --bg-color: #fafafa;
+    --text-color: #000000;
+    --primary-color: #a855f7;
+    /* CV Purple */
+    --secondary-color: #d8b4fe;
+    /* Lavender */
+    --accent-color: #000000;
+    /* Black for borders */
+
+    --shadow-offset: 8px;
+    --border-width: 3px;
+
+    --font-heading: 'Outfit', sans-serif;
+    --font-body: 'Plus Jakarta Sans', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+img,
+video,
+iframe {
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    overflow-x: hidden;
+    position: relative;
+    padding-top: 100px;
+    background-image: radial-gradient(#d1d1d1 1px, transparent 1px);
+    background-size: 20px 20px;
+    /* Dot pattern background */
+}
+
+/* Typography - MASSIVE & BOLD */
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--font-heading);
+    color: var(--text-color);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+h1 {
+    font-size: 5.5rem;
+    line-height: 0.9;
+    margin-bottom: 1rem;
+    text-shadow: 4px 4px 0px var(--secondary-color);
+    word-break: break-word;
+    hyphens: auto;
+}
+
+h2 {
+    font-size: 3.5rem;
+    background: var(--primary-color);
+    color: white;
+    display: inline-block;
+    padding: 0.2rem 1rem;
+    transform: rotate(-2deg);
+    /* Tilted headers */
+    box-shadow: 6px 6px 0px var(--accent-color);
+    margin-bottom: 3rem;
+}
+
+.section-tag {
+    display: inline-block;
+    font-weight: 800;
+    font-size: 1rem;
+    text-transform: uppercase;
+    background: black;
+    color: white;
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
+    transform: rotate(2deg);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Layout */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Header - Solid Full Width */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: white;
+    border-bottom: var(--border-width) solid var(--accent-color);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* No shadow on nav to keep it distinct from floating elements, just the hard border */
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-weight: 900;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    background: var(--primary-color);
+    color: white;
+    padding: 0.2rem 0.5rem;
+    border: 2px solid black;
+    box-shadow: 4px 4px 0px black;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links a {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1rem;
+    color: black;
+    padding: 0.5rem;
+}
+
+.nav-links a:hover {
+    background: var(--secondary-color);
+    box-shadow: 4px 4px 0px black;
+    border: 2px solid black;
+}
+
+/* Section Styling */
+section {
+    padding: 6rem 0;
+    position: relative;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-card {
+    background: white;
+    border: var(--border-width) solid var(--accent-color);
+    padding: 4rem;
+    box-shadow: 15px 15px 0px var(--primary-color);
+    /* Hard Purple Shadow */
+    width: 100%;
+    position: relative;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin: 2rem 0;
+    font-weight: 500;
+    max-width: 800px;
+    border-left: 5px solid var(--primary-color);
+    padding-left: 1rem;
+}
+
+/* Buttons - Brutalist */
+.cta-group {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.btn {
+    padding: 1rem 2.5rem;
+    font-weight: 800;
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+    border: var(--border-width) solid var(--accent-color);
+    transition: all 0.2s;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    color: white;
+    box-shadow: 6px 6px 0px black;
+}
+
+.btn-primary:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 10px 10px 0px black;
+    background: #9333ea;
+}
+
+.btn-outline {
+    background: white;
+    color: black;
+    box-shadow: 6px 6px 0px var(--secondary-color);
+}
+
+.btn-outline:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 10px 10px 0px var(--secondary-color);
+    background: var(--secondary-color);
+}
+
+/* Cards - Neubrutalism */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 3rem;
+}
+
+.card {
+    background: white;
+    border: var(--border-width) solid var(--accent-color);
+    padding: 0;
+    /* Removing padding to let header touch edges */
+    transition: all 0.2s;
+    box-shadow: 10px 10px 0px var(--secondary-color);
+}
+
+.card:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: 14px 14px 0px var(--primary-color);
+}
+
+.card-header {
+    background: black;
+    color: white;
+    padding: 1.5rem;
+    border-bottom: var(--border-width) solid black;
+}
+
+.card h3 {
+    color: white;
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.card-content {
+    padding: 2rem;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+.card p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+/* Tags */
+.card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.tag {
+    background: white;
+    border: 2px solid black;
+    padding: 0.5rem 1rem;
+    font-weight: 700;
+    font-size: 0.8rem;
+    box-shadow: 3px 3px 0px var(--primary-color);
+}
+
+/* Analysis Layout - Comic Panels style */
+.analysis-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.analysis-block {
+    background: white;
+    border: var(--border-width) solid black;
+    padding: 2.5rem;
+    box-shadow: 8px 8px 0px black;
+}
+
+.analysis-block h3 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    background: var(--secondary-color);
+    display: inline-block;
+    padding: 0.2rem 0.5rem;
+    border: 2px solid black;
+}
+
+/* Circular Skills - Sticker style */
+#competences .card {
+    border-radius: 50%;
+    width: 160px;
+    height: 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    border: var(--border-width) solid black;
+    background: white;
+    box-shadow: 6px 6px 0px var(--primary-color);
+    padding: 1rem;
+    transition: all 0.2s;
+}
+
+#competences .card:nth-child(even) {
+    box-shadow: 6px 6px 0px var(--secondary-color);
+    transform: rotate(3deg);
+}
+
+#competences .card:nth-child(odd) {
+    transform: rotate(-3deg);
+}
+
+#competences .card:hover {
+    transform: scale(1.1) rotate(0deg);
+    box-shadow: 10px 10px 0px black;
+    z-index: 10;
+}
+
+/* Footer - THE VIOLET FINALE */
+footer {
+    background: var(--primary-color);
+    /* VIOLET BACKGROUND */
+    color: white;
+    padding: 8rem 0 4rem 0;
+    margin-top: 8rem;
+    text-align: center;
+    border-top: var(--border-width) solid black;
+    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+    position: relative;
+    box-shadow: 0 -10px 0 black;
+    /* Faux border effect above clip path if needed, but clip path cuts it. */
+}
+
+/* Ensure patterns overlay doesn't dull the violet */
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.2) 1px, transparent 1px);
+    background-size: 20px 20px;
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.social-icon {
+    font-size: 2rem;
+    color: var(--primary-color);
+    background: white;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid black;
+    box-shadow: 6px 6px 0px black;
+    transition: all 0.2s;
+}
+
+.social-icon:hover {
+    background: black;
+    color: white;
+    box-shadow: 10px 10px 0px white;
+    transform: translate(-5px, -5px);
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    transition: all 0.3s ease;
+}
+
+/* Hamburger Animation when active */
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 80px;
+        /* Height of header roughly */
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 80px);
+        /* Full height minus header */
+        background: white;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+        transition: left 0.3s ease;
+        border-top: 3px solid black;
+        box-shadow: 0 10px 0 black;
+        /* Shadow at bottom */
+    }
+
+    .nav-links.active {
+        left: 0;
+    }
+
+    .nav-links a {
+        font-size: 1.5rem;
+        /* Larger text for mobile */
+    }
+
+    h1 {
+        font-size: 3.5rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+}
+
+/* Lightbox / Modal */
+.lightbox-modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.lightbox-modal.active {
+    display: flex;
+    opacity: 1;
+}
+
+.lightbox-content {
+    max-width: 90%;
+    max-height: 90%;
+    border: 4px solid white;
+    box-shadow: 10px 10px 0px var(--primary-color);
+    transform: scale(0.8);
+    transition: transform 0.3s ease;
+}
+
+.lightbox-modal.active .lightbox-content {
+    transform: scale(1);
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: var(--font-heading);
+    text-shadow: 2px 2px 0px black;
+}
+
+.lightbox-close:hover {
+    color: var(--primary-color);
+}
+
+/* Cursor indicator for zoomable images */
+.zoomable {
+    cursor: zoom-in;
+    transition: transform 0.2s;
+}
+
+.zoomable:hover {
+    transform: scale(1.02);
+}

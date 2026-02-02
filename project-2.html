@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAE Météo & Mobile - Alexy BUVRY</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Plus+Jakarta+Sans:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css?v=4">
+    <!-- Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">A. BUVRY</div>
+        <nav>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="index.html#biographie">À Propos</a></li>
+                <li><a href="index.html#projets">Projets</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" style="min-height: 40vh;">
+            <div class="container">
+                <div class="hero-card">
+                    <span class="section-tag">Projet SAE Universitaire</span>
+                    <h1>APP MÉTÉO & MOBILE</h1>
+                    <div class="card-tags" style="justify-content: center; margin-top: 1rem;">
+                        <span class="tag">ANDROID</span>
+                        <span class="tag">API REST</span>
+                        <span class="tag">FULLSTACK</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="analysis-section">
+
+                    <div class="analysis-block">
+                        <h3><i class="fas fa-flag-checkered"></i> CONTEXTE DU PROJET</h3>
+                        <p><strong>Commande Académique (BUT 3) :</strong> SAE "Nautical Weather" - Écosystème complet
+                            pour les sports nautiques.</p>
+                        <p style="margin-top: 1rem;"><strong>Sujet :</strong> Plateforme de prévisions météorologiques
+                            multi-supports (Web, Mobile, Montre Connectée) permettant aux sportifs de planifier leurs
+                            sorties en fonction du vent et des conditions.</p>
+                        <p style="margin-top: 1rem;"><strong>Méthodologie :</strong> Gestion de projet <strong>Agile
+                                SCRUM</strong> avec sprints et livrables réguliers.</p>
+                        <p style="margin-top: 1rem;"><strong>Contexte Humain :</strong> Projet démarré à 6
+                            collaborateurs, terminé à 4 (suite à 2 abandons), nécessitant une forte réorganisation
+                            agile.</p>
+                        <ul style="margin-top: 1rem; list-style: none; padding-left: 0;">
+                            <li><i class="fas fa-layer-group"></i> <strong>Stack :</strong> Symfony (API), Kotlin
+                                (Android Natif), Docker.</li>
+                            <li><i class="fas fa-user-astronaut"></i> <strong>Mon Rôle :</strong> Lead Map & Algorithmie
+                                (Visualisation Vent) + DevOps.</li>
+                        </ul>
+                    </div>
+
+                    <div class="analysis-block">
+                        <h3><i class="fas fa-cogs"></i> RÉALISATION & FEATURES</h3>
+                        <p>Un projet technique axé sur la visualisation de données et l'industrialisation (CI/CD).</p>
+
+                        <div class="card-grid" style="grid-template-columns: 1fr; gap: 1.5rem; margin-top: 1.5rem;">
+                            <div style="border-left: 4px solid var(--primary-color); padding-left: 1.5rem;">
+                                <h4 style="margin-bottom: 0.5rem;">Interactive Wind Map (Ma Contribution Majeure)</h4>
+                                <p>Développement du moteur de rendu cartographique. Récupération des données brutes API,
+                                    calcul mathématique des vecteurs (Force/Direction) et génération d'une animation
+                                    fluide des flux de vent en temps réel.</p>
+                            </div>
+                            <div style="border-left: 4px solid var(--primary-color); padding-left: 1.5rem;">
+                                <h4 style="margin-bottom: 0.5rem;">Architecture Dockerisée</h4>
+                                <p>Conteneurisation complète de l'application (Services Web, DB, API) pour garantir un
+                                    environnement iso-prod identique pour tous les développeurs de l'équipe.</p>
+                            </div>
+                            <div style="border-left: 4px solid var(--primary-color); padding-left: 1.5rem;">
+                                <h4 style="margin-bottom: 0.5rem;">CI/CD Gitlab</h4>
+                                <p>Mise en place de pipelines d'intégration continue : Tests unitaires automatisés,
+                                    construction des images Docker et génération automatique des APKs mobile.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="analysis-block">
+                        <h3><i class="fas fa-images"></i> GALERIE "NAUTICAL WEATHER"</h3>
+                        <div style="margin-bottom: 2rem;">
+                            <a href="https://webinfo.iutmontp.univ-montp2.fr/~buvrya/sae-meteo/public/" target="_blank"
+                                class="btn btn-primary">
+                                <i class="fas fa-external-link-alt"></i> VOIR LE SITE EN LIVE
+                            </a>
+                        </div>
+                        <div class="card-grid"
+                            style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem;">
+                            <!-- Screenshot 1 -->
+                            <div class="card" style="padding: 0; box-shadow: 4px 4px 0 black; border: 2px solid black;">
+                                <img src="assets/sae_windmap.png" alt="Carte des Vents Interactive" class="zoomable"
+                                    style="width: 100%; height: 150px; object-fit: cover; border-bottom: 2px solid black;">
+                                <p style="padding: 0.5rem; font-size: 0.8rem; text-align: center; font-weight: bold;">
+                                    CARTE DES VENTS (VECTORIEL)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="analysis-block">
+                        <h3><i class="fas fa-microchip"></i> BILAN DES COMPÉTENCES (NIVEAU 3)</h3>
+
+                        <!-- Compétence RÉALISER -->
+                        <div style="margin-bottom: 3rem;">
+                            <h4
+                                style="background: #b91c1c; color: white; display: inline-block; padding: 0.2rem 1rem; transform: rotate(-1deg); margin-bottom: 1rem;">
+                                COMPÉTENCE 1 : RÉALISER
+                            </h4>
+                            <div style="padding-left: 1.5rem; border-left: 5px solid #b91c1c;">
+                                <p
+                                    style="font-size: 1rem; margin-bottom: 0.5rem; text-transform: uppercase; font-weight: 800; color: #b91c1c;">
+                                    SITUATION : Visualisation de données complexes (Carte des Vents)
+                                </p>
+                                <p style="margin-bottom: 0.5rem;"><strong>AC11.01 - Algorithmie & Intégration :</strong>
+                                </p>
+                                <ul style="list-style: none; padding: 0;">
+                                    <li style="margin-bottom: 0.5rem;"><strong>Problématique :</strong> Rendre lisible
+                                        des milliers de points de données météorologiques (Vitesse/Direction) sans
+                                        surcharger le navigateur.</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong>Solution :</strong> Implémentation d'un
+                                        algorithme de calcul vectoriel côté client. Transformation des données API JSON
+                                        en vecteurs visuels animés sur une couche cartographique interactive.</li>
+                                    <li><strong>Preuve :</strong> Animation fluide et responsive permettant de "voir" le
+                                        vent en temps réel sur la zone choisie.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Compétence OPTIMISER -->
+                        <div style="margin-bottom: 3rem;">
+                            <h4
+                                style="background: #ea580c; color: white; display: inline-block; padding: 0.2rem 1rem; transform: rotate(1deg); margin-bottom: 1rem;">
+                                COMPÉTENCE 2 : OPTIMISER
+                            </h4>
+                            <div style="padding-left: 1.5rem; border-left: 5px solid #ea580c;">
+                                <p
+                                    style="font-size: 1rem; margin-bottom: 0.5rem; text-transform: uppercase; font-weight: 800; color: #ea580c;">
+                                    SITUATION : Industrialisation du déploiement (DevOps)
+                                </p>
+                                <p style="margin-bottom: 0.5rem;"><strong>AC21.01 - Conteneurisation & CI/CD :</strong>
+                                </p>
+                                <ul style="list-style: none; padding: 0;">
+                                    <li style="margin-bottom: 0.5rem;"><strong>Problématique :</strong> Gérer les
+                                        dépendances disparates entre l'API Symfony, le Front Vue.js et l'environnement
+                                        de build Android.</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong>Solution :</strong> Mise en place d'une
+                                        architecture <strong>Docker</strong> complète et de pipelines <strong>Gitlab
+                                            CI</strong>. Automatisation de la génération des exécutables mobiles à
+                                        chaque push.</li>
+                                    <li><strong>Impact :</strong> Réduction drastique des problèmes de configuration
+                                        ("It works on my machine") et déploiement continu fiable.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Compétence COLLABORER -->
+                        <div>
+                            <h4
+                                style="background: black; color: white; display: inline-block; padding: 0.2rem 1rem; transform: rotate(-1deg); margin-bottom: 1rem;">
+                                COMPÉTENCE 6 : COLLABORER
+                            </h4>
+                            <div style="padding-left: 1.5rem; border-left: 5px solid black;">
+                                <p
+                                    style="font-size: 1rem; margin-bottom: 0.5rem; text-transform: uppercase; font-weight: 800; color: black;">
+                                    SITUATION : Gestion de crise & Réorganisation (Scrum)
+                                </p>
+                                <p style="margin-bottom: 0.5rem;"><strong>AC61.02 - Adaptation & Communication
+                                        :</strong></p>
+                                <ul style="list-style: none; padding: 0;">
+                                    <li style="margin-bottom: 0.5rem;"><strong>Challenge :</strong> Perte de 2
+                                        collaborateurs (sur 6) en cours de projet. Redistribution en urgence de la
+                                        charge de travail.</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong>Solution :</strong> Révision du Backlog
+                                        produit pour prioriser les fonctionnalités "Must Have" (Map, API Core). Adoption
+                                        d'un "Pair Programming" rotatif pour monter en compétence sur les parties
+                                        abandonnées.</li>
+                                    <li><strong>Résultat :</strong> Projet livré dans les temps malgré une réduction de
+                                        33% de l'effectif.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="logo"
+                style="margin-bottom: 2rem; display: inline-block; background: white; color: black; border: 3px solid black;">
+                A. BUVRY</div>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/alexy-buvry" target="_blank" class="social-icon"><i
+                        class="fab fa-linkedin-in"></i></a>
+                <a href="mailto:alexy.buvry@etu.umontpellier.fr" class="social-icon"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p style="font-weight: 700;">© 2026 ALEXY BUVRY.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
